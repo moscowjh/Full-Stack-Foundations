@@ -53,7 +53,7 @@ for pbs in pbs:
 
 def CheckIn (puppy.name, shelter.name):
     shelter = session.query(Shelter).filter_by(name = shelter.name).one():
-    if shelter.current_occupancy == shelter.maximum_capacity:
+    if shelter.current_occupancy >= shelter.maximum_capacity:
         print "Please enroll your puppy at another shelter."
 # update puppy (entire record), update shelter.current_occupancy
     else:
